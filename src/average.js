@@ -11,18 +11,18 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (arrs) => {
-  const divisor = arrs.length;
+const average = (array) => {
+  const divisor = array.length;
   let total = 0;
 
-  if (arrs.length === 0) {
+  if (array.length === 0) {
     return undefined;
   }
-  for (let index = 0; index < arrs.length; index += 1) {
-    if (typeof arrs[index] !== 'number') {
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
       return undefined;
     }
-    total += arrs[index];
+    total += array[index];
   }
   return Math.round(total / divisor);
 };
